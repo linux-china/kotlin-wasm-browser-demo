@@ -14,7 +14,7 @@ Install Chrome Canary from https://www.google.com/intl/en_us/chrome/canary/
 After install, please execute following command to start Chrome Canary
 
 ```bash
-/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --js-flags="--experimental-wasm-gc --experimental-wasm-typed-funcref --experimental-wasm-eh" &
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --js-flags="--experimental-wasm-gc --experimental-wasm-typed-funcref" &
 ```
 
 # Build project
