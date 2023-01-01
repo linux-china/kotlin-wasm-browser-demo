@@ -1,5 +1,5 @@
 
-rootProject.name = "wasm-example"
+rootProject.name = "kotlin-wasm-browser-example"
 
 pluginManagement {
     resolutionStrategy {
