@@ -1,7 +1,6 @@
 build:
-   ./gradlew wasmBrowserDistribution
-   cp build/js/packages/wasm-example-wasm/kotlin/wasm-example-wasm.wasm build/distributions/wasm-example-wasm.wasm
-   cp build/js/packages/wasm-example-wasm/kotlin/wasm-example-wasm.wasm build/distributions/wasm-example-wasm.wat
+   ./gradlew build wasmBrowserDistribution
+   cp build/js/packages/kotlin-wasm-browser-example-wasm/kotlin/kotlin-wasm-browser-example-wasm.wasm build/distributions/kotlin-wasm-browser-example-wasm.wasm
 
 server: build
    python3 -m http.server -d build/distributions
