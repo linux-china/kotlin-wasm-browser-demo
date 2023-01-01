@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "1.8.20-dev-4962"
+    kotlin("multiplatform") version "1.8.0"
 }
 
 version = "1.0-SNAPSHOT"
@@ -21,7 +21,7 @@ kotlin {
                 devServer = KotlinWebpackConfig.DevServer(
                     open = mapOf(
                         "app" to mapOf(
-                            "name" to "Google Chrome Canary",
+                            "name" to "google chrome",
                             "arguments" to listOf("--js-flags=--experimental-wasm-gc")
                         )
                     ),
