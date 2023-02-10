@@ -4,18 +4,13 @@ Kotlin WebAssembly hello world in a browser
 
 This sample leverages Kotlin/Wasm and V8 with its Wasm GC, typed function references and exception handling proposals.
 
-
 Origin from: https://github.com/vmware-wasmstack/wasm-languages/tree/main/kotlin/browser-hello-world
 
 # Install Chrome Canary(unstable)
 
-Install Chrome Canary from https://www.google.com/intl/en_us/chrome/canary/
+Install latest Chrome Canary(112+) from https://www.google.com/intl/en_us/chrome/canary/
 
-After install, please execute following command to start Chrome Canary
-
-```bash
-/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --js-flags="--experimental-wasm-gc --experimental-wasm-typed-funcref" &
-```
+After install, open `chrome://flags` and enable all `WebAssembly` flags to active `WebAssembly Garbage Collection`.
 
 # Build project
 
@@ -25,7 +20,7 @@ cp build/js/packages/wasm-example-wasm/kotlin/wasm-example-wasm.wasm build/distr
 cp build/js/packages/wasm-example-wasm/kotlin/wasm-example-wasm.wasm build/distributions/wasm-example-wasm.wat
 ```
 
-# Start web server 
+# Start web server
 
 ```bash
 python3 -m http.server -d build/distributions
