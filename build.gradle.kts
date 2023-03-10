@@ -1,7 +1,7 @@
 @file:Suppress("OPT_IN_USAGE")
 
 plugins {
-    kotlin("multiplatform") version "1.8.20-Beta"
+    kotlin("multiplatform") version "1.8.20-RC"
 }
 
 version = "1.0-SNAPSHOT"
@@ -15,6 +15,5 @@ kotlin {
     wasm {
         binaries.executable()
         browser()
-        applyBinaryen()
     }
 }
