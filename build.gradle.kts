@@ -1,7 +1,7 @@
 @file:Suppress("OPT_IN_USAGE")
 
 plugins {
-    kotlin("multiplatform") version "1.8.20-RC"
+    kotlin("multiplatform") version "1.8.20-RC2"
 }
 
 version = "1.0-SNAPSHOT"
