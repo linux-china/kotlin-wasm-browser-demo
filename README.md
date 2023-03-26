@@ -39,3 +39,7 @@ fun main() {
     document.body.appendChild(p)
 }
 ```
+          
+# References
+
+* Introducing Kotlin/Wasm: https://seb.deleuze.fr/introducing-kotlin-wasm/
