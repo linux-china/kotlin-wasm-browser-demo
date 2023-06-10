@@ -12,18 +12,10 @@ Install latest Chrome Canary(112+) from https://www.google.com/intl/en_us/chrome
 
 After install, open `chrome://flags` and enable all `WebAssembly` flags to active `WebAssembly Garbage Collection`.
 
-# Build project
+# Get started 
 
 ```bash
-./gradlew wasmBrowserDistribution
-cp build/js/packages/wasm-example-wasm/kotlin/wasm-example-wasm.wasm build/distributions/wasm-example-wasm.wasm
-cp build/js/packages/wasm-example-wasm/kotlin/wasm-example-wasm.wasm build/distributions/wasm-example-wasm.wat
-```
-
-# Start web server
-
-```bash
-python3 -m http.server -d build/distributions
+./gradlew wasmBrowserDevelopmentRun -t
 ```
 
 # Testing on Google Canary
@@ -41,5 +33,8 @@ fun main() {
 ```
           
 # References
-
+                                                          
+* Kotlinx DOM API: https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.dom/
+* Kotlinx Browser API: https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.browser/
 * Introducing Kotlin/Wasm: https://seb.deleuze.fr/introducing-kotlin-wasm/
+* Kotlin goes WebAssembly!: https://www.youtube.com/watch?v=oIbX7nrSTPQ
