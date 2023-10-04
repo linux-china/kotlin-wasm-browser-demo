@@ -1,6 +1,6 @@
 # dev mode with watch
 dev:
-  ./gradlew wasmBrowserDevelopmentRun -t
+  ./gradlew wasmJsBrowserRun -t
 
 # build project
 build:
@@ -8,4 +8,4 @@ build:
 
 # serve with http server
 serve: build
-   python3 -m http.server -d build/js/packages/kotlin-wasm-browser-example-wasm/kotlin
+   python3 -m http.server -d build/js/packages/kotlin-wasm-browser-example-wasm-js/kotlin
