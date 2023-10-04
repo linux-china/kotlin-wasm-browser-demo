@@ -15,7 +15,7 @@ repositories {
 
 
 kotlin {
-    wasmJs {
+    wasmJs() {
         binaries.executable()
         browser {
             commonWebpackConfig {
@@ -29,11 +29,18 @@ kotlin {
 
         }
     }
-     sourceSets {
-        val wasmJsMain by getting {}
+    sourceSets {
+        val commonMain by getting
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+        val wasmJsMain by getting
+        val wasmJsTest by getting
     }
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    nodeVersion = "20.7.0"
+    nodeVersion = "20.8.0"
 }
