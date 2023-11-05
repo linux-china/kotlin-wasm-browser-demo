@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "1.9.20-Beta2"
+    kotlin("multiplatform") version "1.9.20"
 }
 
 version = "1.0-SNAPSHOT"
@@ -29,18 +29,9 @@ kotlin {
 
         }
     }
-    sourceSets {
-        val commonMain by getting
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
-        val wasmJsMain by getting
-        val wasmJsTest by getting
-    }
+    
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    nodeVersion = "20.8.0"
+    nodeVersion = "21.1.0"
 }

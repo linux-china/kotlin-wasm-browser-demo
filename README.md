@@ -1,21 +1,23 @@
 Kotlin WebAssembly hello world in a browser
 ============================================
-**Warning : highly experimental status**
-
-This sample leverages Kotlin/Wasm and V8 with its Wasm GC, typed function references and exception handling proposals.
-
-Origin from: https://github.com/vmware-wasmstack/wasm-languages/tree/main/kotlin/browser-hello-world
 
 # Install Chrome Canary(unstable)
 
-Install latest Chrome Canary(112+) from https://www.google.com/intl/en_us/chrome/canary/
+Install latest Chrome Canary(120+) from https://www.google.com/intl/en_us/chrome/canary/
 
 After install, open `chrome://flags` and enable all `WebAssembly` flags to active `WebAssembly Garbage Collection`.
 
-# Get started 
+Kotlin 1.9.20-Beta2 is out!
+
+* ⚠️ Since this version, Kotlin/Wasm uses final opcodes for Wasm GC and TFR* proposals.
+* ⚠️ So, it may require updating your wasm environment!
+
+For Chrome, Chromium-based browsers, and Firefox, you need version 119.
+
+# Get started
 
 ```bash
-./gradlew wasmBrowserDevelopmentRun -t
+./gradlew wasmJsBrowserRun -t
 ```
 
 # Testing on Google Canary
@@ -31,9 +33,9 @@ fun main() {
     document.body.appendChild(p)
 }
 ```
-          
+
 # References
-                                                          
+
 * Kotlinx DOM API: https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.dom/
 * Kotlinx Browser API: https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.browser/
 * Introducing Kotlin/Wasm: https://seb.deleuze.fr/introducing-kotlin-wasm/
