@@ -9,3 +9,7 @@ build:
 # serve with http server
 serve: build
    python3 -m http.server -d build/js/packages/kotlin-wasm-browser-example-wasm-js/kotlin
+
+clean:
+  ./gradlew clean
+  rm -rf ./kotlin-js-store
