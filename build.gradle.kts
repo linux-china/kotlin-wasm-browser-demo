@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "2.0.0-RC2"
+    kotlin("multiplatform") version "2.0.20"
 }
 
 version = "1.0-SNAPSHOT"
@@ -33,5 +33,5 @@ kotlin {
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    nodeVersion = "22.1.0"
+    version = "22.7.0"
 }
