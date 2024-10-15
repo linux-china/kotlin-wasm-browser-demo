@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "2.0.20"
+    kotlin("multiplatform") version "2.1.0-Beta2"
 }
 
 version = "1.0-SNAPSHOT"
@@ -29,9 +29,23 @@ kotlin {
 
         }
     }
-    
+    sourceSets {
+        val commonMain by getting
+        val commonTest by getting {
+            dependencies {
+                implementation("org.jetbrains.kotlin:kotlin-test:2.1.0-Beta2")
+            }
+        }
+        val wasmJsMain by getting {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-browser:0.2")
+            }
+        }
+        val wasmJsTest by getting
+    }
+
 }
 
 rootProject.the<NodeJsRootExtension>().apply {
-    version = "22.7.0"
+    version = "22.9.0"
 }
