@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "2.1.0-Beta2"
+    kotlin("multiplatform") version "2.1.0-RC2"
 }
 
 version = "1.0-SNAPSHOT"
@@ -33,7 +33,7 @@ kotlin {
         val commonMain by getting
         val commonTest by getting {
             dependencies {
-                implementation("org.jetbrains.kotlin:kotlin-test:2.1.0-Beta2")
+                implementation("org.jetbrains.kotlin:kotlin-test:2.1.0-RC2")
             }
         }
         val wasmJsMain by getting {
