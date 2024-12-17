@@ -1,18 +1,11 @@
 Kotlin WebAssembly hello world in a browser
 ============================================
 
-# Install Chrome Canary(unstable)
+# Browser
 
-Install latest Chrome Canary(120+) from https://www.google.com/intl/en_us/chrome/canary/
-
-After install, open `chrome://flags` and enable all `WebAssembly` flags to active `WebAssembly Garbage Collection`.
-
-Kotlin 1.9.20-Beta2 is out!
-
-* ⚠️ Since this version, Kotlin/Wasm uses final opcodes for Wasm GC and TFR* proposals.
-* ⚠️ So, it may require updating your wasm environment!
-
-For Chrome, Chromium-based browsers, and Firefox, you need version 119.
+- Google Chrome 120+
+- Safari 18.2
+- Firefox 128+
 
 # Get started
 
@@ -20,7 +13,7 @@ For Chrome, Chromium-based browsers, and Firefox, you need version 119.
 ./gradlew wasmJsBrowserRun -t
 ```
 
-# Testing on Google Canary
+# Testing on Google Chrome
 
 Visit http://localhost:8000/index.html
 
